@@ -4,13 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <title>LOGIN_PAGE</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <script type="text/javascript">
-        
+    <div class ="display">
+    <h1 align = "center">
+        Login
+    </h1>
+    <div align ="center">
+    <form>
+        <input type="email" placeholder="Email" id="getemail"><br>
+        <br>
+        <input type="password" placeholder="Password" id="getpass"><br>
+    </form><br>
+    <button class="green" type="submit" onclick="getvalue();">Login!</button><br>
+    <br>
+    <a href="https://www.kjscecodecell.com/" target="_blank">Go to codecell page!</a>
+    <br>
+    </div>
+    </div>
+    <script>
+        let message ="You have Logged In !!!"
+        const details= [];
+        function getvalue(){
+            details.push(document.getElementById("getemail").value,document.getElementById("getpass").value)
+            
+            
+            console.log(JSON.stringify(details));
+
+            alert(message);
+        }
     </script>
 </body>
 </html>
